@@ -1,0 +1,4 @@
+br\com\curso\listavip\ConvidadoController.class
+br\com\curso\listavip\model\Convidado.class
+br\com\curso\listavip\Configuracao.class
+br\com\curso\listavip\repository\ConvidadoRepository.class
