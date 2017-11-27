@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1" />
 <title>Lista de convidados</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+	integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+	crossorigin="anonymous" />
 </head>
 <body>
-	<h1>Lista de convidados</h1>
+
+	<div class="container">
+		<h2>Lista de convidados</h2>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Email</th>
+					<th>Telefone</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="convidado : ${listaconvidados}">
+					<td><span th:text="${convidado.nome}"></span></td>
+					<td><span th:text="${convidado.email}"></span></td>
+					<td><span th:text="${convidado.telefone}"></span></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr />
+		<h2>Cadastro de convidados</h2>
+		<form action="salvar" method="post">
+			<div class="form-group">
+				<label for="nome">Nome</label> <input type="text"
+					class="form-control" id="nome" name="nome" placeholder="Nome" />
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label> <input type="email"
+					class="form-control" id="email" name="email" placeholder="Email" />
+			</div>
+			<div class="form-group">
+				<label for="telefone">Telefone</label> <input type="text"
+					class="form-control" id="telefone" name="telefone"
+					placeholder="Telefone" />
+			</div>
+			<button type="submit" class="btn btn-success">Convidar</button>
+		</form>
+	</div>
 </body>
 </html>
