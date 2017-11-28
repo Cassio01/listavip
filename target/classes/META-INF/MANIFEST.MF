@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+Implementation-Title: listavip
+Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: Cassio
+Implementation-Vendor-Id: br.com.curso.listavip
 Build-Jdk: 1.8.0_144
+Implementation-URL: http://projects.spring.io/spring-boot/listavip/
 Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
 
